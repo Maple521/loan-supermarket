@@ -9,7 +9,6 @@
         <module name="eureka-server" />
         <module name="gani-admin" />
         <module name="gani-user" />
-        <module name="loan-supermarket" />
         <module name="zuul" />
       </profile>
     </annotationProcessing>
