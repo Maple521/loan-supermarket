@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-server" />
+        <module name="gani-admin" />
+        <module name="gani-user" />
         <module name="loan-supermarket" />
         <module name="zuul" />
       </profile>
@@ -15,6 +17,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka-server" options="-parameters" />
+      <module name="gani-admin" options="-parameters" />
+      <module name="gani-user" options="-parameters" />
       <module name="loan-supermarket" options="-parameters" />
       <module name="zuul" options="-parameters" />
     </option>
