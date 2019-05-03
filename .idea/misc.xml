@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/zuul/pom.xml" />
         <option value="$PROJECT_DIR$/gani-admin/pom.xml" />
         <option value="$PROJECT_DIR$/gani-user/pom.xml" />
+        <option value="$PROJECT_DIR$/config-server/pom.xml" />
       </list>
     </option>
   </component>
