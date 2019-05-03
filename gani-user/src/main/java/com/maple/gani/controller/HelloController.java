@@ -11,7 +11,7 @@ import javax.annotation.Resource;
 @RestController
 public class HelloController {
 
-    @Value(value = "whb")
+    @Value("${whb}")
     private String whb;
 
     @Resource
