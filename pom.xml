@@ -23,15 +23,5 @@
         <module>gani-user</module>
     </modules>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.whb</groupId>
-                <artifactId>gani-util</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
 
 </project>

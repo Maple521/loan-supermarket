@@ -1,5 +1,7 @@
 package com.maple.gani.controller;
 
+import com.maple.gani.common.ServiceTemplate;
+import com.maple.gani.reference.consumer.TestClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
@@ -29,17 +31,4 @@ public class HelloController {
         }
         return "Hello World";
     }
-
-    @Value("${whb}") // git配置文件里的key
-    String whb;
-
-    @Resource
-    private com.whb.util.ServiceTemplate serviceTemplate;
-
-    @RequestMapping(value = "/hi")
-    public String hi() {
-
-        return whb;
-    }
-
 }

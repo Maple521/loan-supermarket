@@ -39,7 +39,7 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.whb</groupId>
+            <groupId>com.maple.gani</groupId>
             <artifactId>gani-util</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>

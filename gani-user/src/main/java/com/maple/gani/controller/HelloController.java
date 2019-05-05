@@ -1,5 +1,6 @@
 package com.maple.gani.controller;
 
+import com.maple.gani.common.Result;
 import com.maple.gani.reference.consumer.TestClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +21,7 @@ public class HelloController {
     @RequestMapping(value = "/feign-consumer", method = RequestMethod.GET)
     public String helloConsumer() {
         System.out.println("-------:" + whb);
-        String test = testClient.test();
-        return test;
+        Result<String> result = testClient.test();
+        return result.getData();
     }
 }
