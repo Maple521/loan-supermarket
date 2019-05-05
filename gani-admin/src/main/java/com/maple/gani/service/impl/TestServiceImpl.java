@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class TestServiceImpl implements TestService {
 
     @Override
-    public void test() {
-
+    public String test() {
+        return "王弘博测试Feign";
     }
 }

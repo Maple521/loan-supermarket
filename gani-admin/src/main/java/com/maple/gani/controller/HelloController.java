@@ -1,5 +1,6 @@
 package com.maple.gani.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -32,8 +33,12 @@ public class HelloController {
     @Value("${whb}") // git配置文件里的key
     String whb;
 
+    @Resource
+    private com.whb.util.ServiceTemplate serviceTemplate;
+
     @RequestMapping(value = "/hi")
     public String hi() {
+
         return whb;
     }
 
