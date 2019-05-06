@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
-@RestController
+@RestController("/admin")
 public class TestProvider {
 
     @Resource
@@ -18,32 +18,26 @@ public class TestProvider {
     @Resource
     private TestService testService;
 
-    /*@GetMapping("/test")
-    public String test() {
-        return testService.test();
-    }*/
     @GetMapping("/test")
     public Result<String> test() {
-        Result result = new Result();
-        result.setData(testService.test());
-        return result;
-        /*return serviceTemplate.execute(result -> {
+        return serviceTemplate.execute(result -> {
             result.setData(testService.test());
         }, (result, ex) -> {
             return handleException(result, ex);
-        });*/
+        });
     }
 
     @GetMapping("/test1")
-    Result<User> test1(){
-        Result result = new Result();
-        User user = testService.test1();
-        result.setData(user);
-        return result;
+    Result<User> test1() {
+        return serviceTemplate.execute(result -> {
+            result.setData(testService.test1());
+        }, (result, ex) -> {
+            return handleException(result, ex);
+        });
     }
 
     @GetMapping("/test2")
-    Result<String> test2(){
+    Result<String> test2() {
         return serviceTemplate.execute(result -> {
             result.setData(testService.test2());
         }, (result, ex) -> {
