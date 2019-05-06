@@ -2,6 +2,7 @@ package com.maple.gani.reference.provider;
 
 import com.maple.gani.common.Result;
 import com.maple.gani.common.ServiceTemplate;
+import com.maple.gani.reference.provider.dto.User;
 import com.maple.gani.service.TestService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,6 +32,23 @@ public class TestProvider {
         }, (result, ex) -> {
             return handleException(result, ex);
         });*/
+    }
+
+    @GetMapping("/test1")
+    Result<User> test1(){
+        Result result = new Result();
+        User user = testService.test1();
+        result.setData(user);
+        return result;
+    }
+
+    @GetMapping("/test2")
+    Result<String> test2(){
+        return serviceTemplate.execute(result -> {
+            result.setData(testService.test2());
+        }, (result, ex) -> {
+            return handleException(result, ex);
+        });
     }
 
     private <T> boolean handleException(Result<T> r, Exception e) {
